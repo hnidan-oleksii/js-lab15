@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Map Builder</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                function mapBuilder(keysArray, valuesArrays) {
+                    let map = new Map();
+                    keysArray.forEach((key, index) => map.set(key, valuesArrays[index]));
+                    return map;
+                }
+                let keys = [1, 2, 3, 4];
+                let values = ["div", "span", "b", "i"];
+                let map = mapBuilder(keys, values);
+                console.log(map.size); // 4
+                console.log(map.get(2)); // "span"
+            });
+        </script>
+    </body>
+</html>

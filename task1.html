@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Target Attribute</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <a href="https://example.com">Example Link</a>
+        <a href="http://example.com">Another Link</a>
+
+        <script>
+            $(document).ready(function(){
+                $('a[href^="https://"]').attr('target', '_blank');
+            });
+        </script>
+    </body>
+</html>

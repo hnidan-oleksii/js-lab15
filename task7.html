@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Multiply Numbers</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <script>
+            $(document).ready(function(){
+                function mul(...args) {
+                    let product = null;
+                    args.forEach(arg => {
+                        if (typeof arg === 'number') {
+                            if (product === null) {
+                                product = arg;
+                            } else {
+                                product *= arg;
+                            }
+                        }
+                    });
+                    return product === null ? 0 : product;
+                }
+                console.log(mul(1, "str", 2, 3, true));
+                console.log(mul(null, "str", false, true));
+            });
+        </script>
+    </body>
+</html>

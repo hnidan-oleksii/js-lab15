@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Disable Checkboxes</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <input type="checkbox" id="checkbox1"> Checkbox 1<br>
+        <input type="checkbox" id="checkbox2"> Checkbox 2<br>
+        <input type="checkbox" id="checkbox3"> Checkbox 3<br>
+        <input type="checkbox" id="checkbox4"> Checkbox 4<br>
+        <input type="checkbox" id="checkbox5"> Checkbox 5<br>
+        <input type="checkbox" id="checkbox6"> Checkbox 6<br>
+
+        <script>
+            $(document).ready(function() {
+                $(':checkbox').change(function() {
+                    let checkedCount = $(':checkbox:checked').length;
+
+                    if (checkedCount === 3) {
+                        $(':checkbox').prop('disabled', true);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
