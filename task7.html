@@ -13,10 +13,9 @@
                     args.forEach(arg => {
                         if (typeof arg === 'number') {
                             if (product === null) {
-                                product = arg;
-                            } else {
-                                product *= arg;
+                                product = 1;
                             }
+                            product *= arg;
                         }
                     });
                     return product === null ? 0 : product;
